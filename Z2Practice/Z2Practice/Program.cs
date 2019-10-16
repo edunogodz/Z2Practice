@@ -13,5 +13,10 @@ namespace Z2Practice
         {
             Console.WriteLine("I'm Breathing");
         }
+
+        static void Breathe2()
+        {
+            Console.WriteLine("I'm Breathing 2");
+        }
     }
 }
