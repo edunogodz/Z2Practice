@@ -6,55 +6,33 @@ namespace Z2Practice
     {
         static void Main(string[] args)
         {
-            Car myCar = new Car
-            {
-                Color = "Blue"
-            };
+            Animal myAnimal = new Animal();
+            //myAnimal.Name = "Fred";
+            //myAnimal.SetAnimalName("");
 
-            Car myCar2 = new Car
-            {
-                Color = "Red"
-            };
-
-            //_ = new Car
-            //{
-            //    Color = "Red"
-            //};
-
-            //_ = new Car
-            //{
-            //    Color = "Green"
-            //};
-
-            //Math myMath = new Math();
-            //myMath.DoThings();
-            //myMath.myString = "Hello";
-
-            int total = Math.Add(5, 3);
-                        
-            int total2 = Math.Add(6, 12);
-
-            Console.WriteLine(total);
-            Console.WriteLine(total2);
+            Console.WriteLine(myAnimal.Name);
         }
     }
-}
 
- class Car
-{
-    public string Color { get; set; }
-}
-
-static class Math
-{
-    //public string myString { get; set; }
-    public static int Add(int a,int b)
+    class Animal
     {
-        return a + b;
+        public string Name { get;}
+
+        //private string _name;
+
+        public Animal()
+        {
+            Name = "No Name";
+        }
+
+        public Animal(string name)
+        {
+            Name = name;
+        }
+        //public void SetAnimalName(string name)
+        //{
+        //    Name = name;
+        //}
     }
-
-    //public void DoThings()
-    //{
-
-    //}
 }
+
