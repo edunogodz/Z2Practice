@@ -6,7 +6,12 @@ namespace Z2Practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Program.Breathe() ;
+        }
+
+        static void Breathe()
+        {
+            Console.WriteLine("I'm Breathing");
         }
     }
 }
