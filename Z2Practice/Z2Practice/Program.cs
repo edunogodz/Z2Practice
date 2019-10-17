@@ -6,33 +6,55 @@ namespace Z2Practice
     {
         static void Main(string[] args)
         {
-            Animal myAnimal = new Animal();
-            //myAnimal.Name = "Fred";
-            //myAnimal.SetAnimalName("");
+            //Animal myAnimal = new Animal();
+            IAnimal myAnimal;
+            Console.WriteLine("What animal are you?");
+            string input = Console.ReadLine();
 
-            Console.WriteLine(myAnimal.Name);
+            if (input == "Dog")
+            {
+                myAnimal = new Dog();
+            }
+            else
+            {
+                myAnimal = new Animal();
+            }
+
+            myAnimal.Name = "Jessica";
+            myAnimal.Breathe();
         }
     }
 
-    class Animal
+    class Animal : IAnimal
     {
-        public string Name { get;}
+        public string Name { get;  set ; }
 
-        //private string _name;
+        public string Color { get; set; }
 
-        public Animal()
+        public void Breathe()
         {
-            Name = "No Name";
+            Console.WriteLine("I'm breathing");
         }
+    }
 
-        public Animal(string name)
+    class Dog : IAnimal
+    {
+        public string Name { get; set; }
+
+ 
+        public void Breathe()
         {
-            Name = name;
+            Console.WriteLine("I'm a dog breathing");
         }
-        //public void SetAnimalName(string name)
-        //{
-        //    Name = name;
-        //}
+    }
+
+
+    interface IAnimal
+    {
+        string  Name { get; set; }
+
+        void Breathe();
+        
     }
 }
 
